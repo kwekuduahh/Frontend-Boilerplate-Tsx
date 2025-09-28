@@ -17,14 +17,12 @@ To install your packages;
 
 ```
 pnpm install
-
 ```
 
 To run the project,
 
 ```
 pnpm dev
-
 ```
 
 Currently, two official plugins are available:
