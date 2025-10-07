@@ -1,9 +1,10 @@
 import { type RouteObject } from "react-router"
 import { ErrorBoundary } from "react-error-boundary"
 import { Suspense } from "react"
-import GlobalLoader from "@/_shared/Hoc/GlobalLoader"
+import GlobalLoader from "@/_Shared/Hoc/GlobalLoader"
 import NotFound from "@/Modules/Errors/Pages/NotFound"
-import ErrorFallback from "@/_shared/Components/ErrorFallback"
+import ErrorFallback from "@/_Shared/Components/ErrorFallback"
+import ScrollToTop from "@/_Shared/Components/ScrollToTop"
 
 
 const wrapRoutesWithErrorBoundary = (route: RouteObject): RouteObject => {
@@ -13,6 +14,7 @@ const wrapRoutesWithErrorBoundary = (route: RouteObject): RouteObject => {
             element: (
                 <ErrorBoundary FallbackComponent={ErrorFallback}>
                     <Suspense fallback={<GlobalLoader />}>
+                        <ScrollToTop />
                         {route.element}
                     </Suspense>
                 </ErrorBoundary>

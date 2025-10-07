@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import { Button } from '@/_shared/Components/ui/Button';
+import { Button } from '@/_Shared/Components/Ui/button';
 import { ArrowLeft, Home } from 'lucide-react';
 
 const NotFound: React.FC = () => {
